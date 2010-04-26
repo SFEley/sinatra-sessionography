@@ -37,8 +37,8 @@ If you'd like to access that hash in your test cases, there are module methods a
     # This example is in RSpec, because that is how I roll.
     describe HypotheticalApp do
       before(:each) do
-        # You should initialize the session every time, with a .clear or
-        # an assignment.  Here, we simulate pre-existing state.
+        # Initialize the session every time. Here we simulate pre-existing state,
+        # but you could just as easily assign nil or call .clear
         Sinatra::Sessionography.session = {:foo => 'bar', :too => 'tar'}
       end
       
@@ -70,9 +70,11 @@ I don't need any of those _today,_ so I'm not going to build them right away.  B
 
 License
 -------
-This project is licensed under the [Don't Be a Dick License][5], version 0.2, and is copyright 2010 by Stephen Eley. See the [LICENSE.markdown][5] file for elaboration on not being a dick.
+This project is licensed under the **Don't Be a Dick License**, version 0.2, and is copyright 2010 by Stephen Eley. See the [LICENSE.markdown][5] file or the [DBAD License site][6] for elaboration on not being a dick.
 
 [1]:http://groups.google.com/group/sinatrarb/msg/338ece48db7963cf
 [2]:http://github.com/brynary/rack-test
 [3]:http://rvm.beginrescueend.com
 [4]:http://github.com/SFEley/sinatra-flash
+[5]: http://github.com/SFEley/sinatra-sessionography/blob/master/LICENSE.markdown
+[6]: http://dbad-license.org
