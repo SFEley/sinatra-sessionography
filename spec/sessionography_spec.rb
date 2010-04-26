@@ -27,6 +27,12 @@ describe Sinatra::Sessionography do
     last_response.body.should == "{:sheep=>:baa}"
   end
   
+  it "returns an empty hash when set to nil" do
+    Sinatra::Sessionography.session = nil
+    get "/session"
+    last_response.body.should == "{}"
+  end
+  
   it "persists state across requests" do
     post "/session", {:snail=>:slurp, :monkey=>:howl, :deer=>'Shoot me!'}
     post "/session", {:cow=>:moo, :deer=>nil}

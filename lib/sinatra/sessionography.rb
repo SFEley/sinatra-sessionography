@@ -24,9 +24,11 @@ module Sinatra
     # empty hash or to the contents of 'rack.session' if you don't do this.)
     # 
     # @param [Hash] val The hash to use as the session. Note that we clone the object; we don't maintain
-    #   a live link to the same hash.
+    #   a live link to the same hash. Objects that can't be cloned (such as nil) will set the session to nil.
     def self.session=(val)
       @session = val.clone
+    rescue TypeError   # Nil doesn't respond to clone
+      @session = nil
     end
     
     # Replaces Sinatra's #session helper to completely bypass Rack::Session, thus mocking out 
