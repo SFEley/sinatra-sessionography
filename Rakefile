@@ -5,11 +5,12 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "sinatra-sessionography"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{A simple sessions stub for testing Sinatra}
+    gem.description = %Q{Sessionography has only one function: to replace Sinatra's session methods with a basic hash that persists across requests.  Bypassing Rack::Session removes nearly all the complexity of unit and integration testing with session data.}
     gem.email = "sfeley@gmail.com"
     gem.homepage = "http://github.com/SFEley/sinatra-sessionography"
     gem.authors = ["Stephen Eley"]
+    gem.add_dependency "sinatra", ">= 1.0" 
     gem.add_development_dependency "rspec", ">= 1.2.9"
     gem.add_development_dependency "yard", ">= 0"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
