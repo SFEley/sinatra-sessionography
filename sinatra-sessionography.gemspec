@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{sinatra-sessionography}
-  s.version = "0.0.0"
+  s.version = "0.0.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Stephen Eley"]
@@ -19,8 +19,13 @@ Gem::Specification.new do |s|
   s.files = [
     ".document",
      ".gitignore",
+     "LICENSE.markdown",
+     "README.markdown",
      "Rakefile",
      "VERSION",
+     "lib/sinatra/sessionography.rb",
+     "sinatra-sessionography.gemspec",
+     "spec/sessionography_spec.rb",
      "spec/spec.opts",
      "spec/spec_helper.rb"
   ]
