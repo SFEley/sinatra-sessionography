@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{sinatra-sessionography}
-  s.version = "0.1.0"
+  s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Stephen Eley"]
-  s.date = %q{2010-04-26}
+  s.date = %q{2010-04-28}
   s.description = %q{Sessionography has only one function: to replace Sinatra's session methods with a basic hash that persists across requests.  Bypassing Rack::Session removes nearly all the complexity of unit and integration testing with session data.}
   s.email = %q{sfeley@gmail.com}
   s.extra_rdoc_files = [
@@ -25,6 +25,7 @@ Gem::Specification.new do |s|
      "VERSION",
      "lib/sinatra/sessionography.rb",
      "sinatra-sessionography.gemspec",
+     "spec/base_spec.rb",
      "spec/sessionography_spec.rb",
      "spec/spec.opts",
      "spec/spec_helper.rb"
@@ -35,7 +36,8 @@ Gem::Specification.new do |s|
   s.rubygems_version = %q{1.3.6}
   s.summary = %q{A simple sessions stub for testing Sinatra}
   s.test_files = [
-    "spec/sessionography_spec.rb",
+    "spec/base_spec.rb",
+     "spec/sessionography_spec.rb",
      "spec/spec_helper.rb"
   ]
 
