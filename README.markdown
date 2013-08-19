@@ -15,7 +15,7 @@ to use this. But most of us just want to get on with testing our apps.
 
 Setting up
 ----------
-    $ gem install sinatra-sessiongraphy
+    $ gem install sinatra-sessionography
 
 (Or `sudo gem install` if you're the last person on Earth who isn't using [RVM][3] yet.)
 
